@@ -26,6 +26,23 @@
 <image src="./images/device_manager_jtag.png" height=50% width=50% alt="Silicon Labs CP210x USB to UART Bridge">
 
 ---
-#### platformio.ini
-<image src="./images/platform_ini.png" height=50% width=50% alt="Silicon Labs CP210x USB to UART Bridge">
+```ini
+; PlatformIO Project Configuration File
+;
+;   Build options: build flags, source filter
+;   Upload options: custom upload port, speed and extra flags
+;   Library options: dependencies, extra library storages
+;   Advanced options: extra scripting
+;
+; Please visit documentation for the other options and examples
+; https://docs.platformio.org/page/projectconf.html
 
+[env:esp32-s3-devkitc-1]
+platform = espressif32
+board = esp32-s3-devkitc-1
+framework = espidf
+build_type = debug
+upload_protocol = esp-builtin
+monitor_port = COM8
+monitor_speed = 115200
+debug_tool = esp-builtin
